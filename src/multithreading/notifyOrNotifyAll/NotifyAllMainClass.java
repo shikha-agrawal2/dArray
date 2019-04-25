@@ -1,4 +1,5 @@
 package multithreading.notifyOrNotifyAll;
+//https://www.geeksforgeeks.org/difference-notify-notifyall-java/
 //Notification to number of threads : We can use notify() method to give the notification for only one thread which is waiting for a particular object whereas
 // by the help of notifyAll() methods we can give the notification to all waiting threads of a particular object.
 class Geek4 extends Thread {
