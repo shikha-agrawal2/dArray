@@ -8,6 +8,9 @@ public class OddOccurrencesInArray {
         int[] test = {9, 3, 9, 3, 9, 7, 9};
         int solution = solution(test);
         System.out.println(solution);
+        int[] test1 = {9, 3, 9, 3, 9, 7, 7};
+        int solution1 = solution(test1);
+        System.out.println(solution1);
     }
 
     public static int solution(int[] A) {
@@ -22,7 +25,7 @@ public class OddOccurrencesInArray {
             }
         }
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1) {
+            if (entry.getValue()%2!=0) {
                 return entry.getKey();
             }
         }
