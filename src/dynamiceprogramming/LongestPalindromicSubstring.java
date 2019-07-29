@@ -1,7 +1,7 @@
 package dynamiceprogramming;
 
 public class LongestPalindromicSubstring {
-// Java Solution
+// Java CountIndexPairsWithEqualElementsArray
     // A utility function to print a substring str[low..high]
     static void printSubStr(String str, int low, int high) {
         System.out.println(str.substring(low, high + 1));
