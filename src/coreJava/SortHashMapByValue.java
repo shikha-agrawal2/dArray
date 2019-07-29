@@ -41,7 +41,7 @@ public class SortHashMapByValue {
         hm.put("Operating System", 79);
         hm.put("Networking", 80);
         Map<String, Integer> hm1 = sortByValue(hm);
-
+       // Set<String> strings = hm1.keySet();
         // print the sorted hashmap
         for (Map.Entry<String, Integer> en : hm1.entrySet()) {
             System.out.println("Key = " + en.getKey() +
