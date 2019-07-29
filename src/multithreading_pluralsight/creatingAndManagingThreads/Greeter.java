@@ -23,3 +23,6 @@ public class Greeter extends Thread {
         }
     }
 }
+
+/*problems inheriting from Thread, should prefer composition over inheritance
+* Can only inherit from one class in java*/
