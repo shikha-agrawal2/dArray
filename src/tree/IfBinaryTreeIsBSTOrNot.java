@@ -1,7 +1,7 @@
 package tree;
 
 import utility.Node;
-
+//https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
 public class IfBinaryTreeIsBSTOrNot {
     Node root;
     Node prev = null;
@@ -12,7 +12,7 @@ public class IfBinaryTreeIsBSTOrNot {
         tree.root.right = new Node(5);
         tree.root.left.left = new Node(1);
         tree.root.left.right = new Node(3);
-       // tree.isBST(tree.root);
+       tree.isBST(tree.root);
         tree.isBST(tree.root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 //Recursive way
@@ -26,20 +26,20 @@ public class IfBinaryTreeIsBSTOrNot {
 
     }
 
-//    private boolean isBST(Node node) {
-//        // traverse the tree in inorder fashion and
-//        // keep a track of previous node
-//        if (node != null)
-//        {
-//            if (!isBST(node.left))
-//                return false;
-//
-//            // allows only distinct values node
-//            if (prev != null && node.data <= prev.data )
-//                return false;
-//            prev = node;
-//            return isBST(node.right);
-//        }
-//        return true;
-//    }
+    private boolean isBST(Node node) {
+        // traverse the tree in inorder fashion and
+        // keep a track of previous node
+        if (node != null)
+        {
+            if (!isBST(node.left))
+                return false;
+
+            // allows only distinct values node
+            if (prev != null && node.data <= prev.data )
+                return false;
+            prev = node;
+            return isBST(node.right);
+        }
+        return true;
+    }
 }
