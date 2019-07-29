@@ -2,7 +2,7 @@ package coreJava;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
+//http://sophiafeng.com/2013/11/21/lru-cache-implementation-by-linkedhashmap-leetcode/
 public class LRUImplementation {
     MyLRU map;
 
