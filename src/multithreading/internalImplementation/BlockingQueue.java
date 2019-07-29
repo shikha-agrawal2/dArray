@@ -1,7 +1,7 @@
 package multithreading.internalImplementation;
 //Blocking queue is queue A blocking queue is a queue that blocks when you try to dequeue from it and the queue is empty,
 // or if you try to enqueue items to it and the queue is already full.
-//A blocking queue is a queue that blocks when you try to dequeue from it and the queue is empty, or if you try to enqueue items to it and the queue is already full.
+//https://www.geeksforgeeks.org/blockingqueue-interface-in-java/
 
 import java.util.LinkedList;
 import java.util.List;
@@ -15,15 +15,16 @@ public class BlockingQueue {
     }
 
     public synchronized void enqueue(Object item) throws InterruptedException {
-        while(this.queue.size()==limit) wait();
-        if(this.queue.size()==0){
+        while (this.queue.size() == limit) wait();
+        if (this.queue.size() == 0) {
             notifyAll();
         }
         this.queue.add(item);
     }
+
     public synchronized Object dequeue() throws InterruptedException {
-        while(this.queue.size()==0) wait();
-        if(this.queue.size()==this.limit){
+        while (this.queue.size() == 0) wait();
+        if (this.queue.size() == this.limit) {
             notifyAll();
         }
         return this.queue.remove(0);
